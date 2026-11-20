@@ -42,3 +42,22 @@ body {
   border: 1px solid rgba(139, 92, 246, 0.25);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 24px rgba(139, 92, 246, 0.1);
 }
+
+
+.hero-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+  opacity: 0.5;
+}
+
+.hero-glow {
+  background: radial-gradient(
+    circle at 80% 20%,
+    color-mix(in srgb, var(--accent) 16%, transparent),
+    transparent 55%
+  );
+}
