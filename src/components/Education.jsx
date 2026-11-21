@@ -18,7 +18,7 @@ export default function Education() {
             transition={{ duration: 0.5 }}
             className="relative mb-10 last:mb-0"
           >
-            <span className="absolute -left-[41px] top-2 h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(96,165,250,0.8)]" />
+            <span className="absolute -left-[38px] top-2 h-3 w-3 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(96,165,250,0.8)]" />
             <p className="font-mono text-xs text-emerald-400">{item.period}</p>
             <h3 className="mt-1 text-lg font-semibold text-white">{item.title}</h3>
             <p className="text-sm text-gray-400">{item.place}</p>
@@ -34,6 +34,23 @@ export default function Education() {
                 ))}
               </div>
             )}
+            {item.years?.map((year) => (
+              <div key={year.label} className="mt-5">
+                <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">
+                  {year.label}
+                </p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {year.subjects.map((subject) => (
+                    <span
+                      key={subject}
+                      className="rounded-md bg-white/5 px-3 py-1 text-xs text-gray-300"
+                    >
+                      {subject}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </motion.div>
         ))}
       </div>

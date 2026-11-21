@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const FORM_ENDPOINT = '' // paste your Formspree URL here (see below)
+const FORM_ENDPOINT = 'https://formspree.io/f/xkjrqnvq' // paste your Formspree URL here (see below)
 
 const links = [
   { label: 'Email', value: 'ravindurasanjana92@gmail.com', href: 'mailto:ravindurasanjana92@gmail.com' },
   { label: 'LinkedIn', value: 'ravindu-rasanjana', href: 'https://linkedin.com/in/ravindu-rasanjana-8a7243298' },
   { label: 'GitHub', value: 'Ravindur92', href: 'https://github.com/Ravindur92' },
-  { label: 'Location', value: 'Hambantota, Sri Lanka', href: '' },
+  { label: 'Location', value: 'Colombo, Sri Lanka', href: '' },
 ]
 
 export default function Contact() {

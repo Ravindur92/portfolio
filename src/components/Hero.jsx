@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import {
   ArrowRight, Download, Mail, FolderGit2, Wrench, Crosshair, GraduationCap,
+  Fingerprint, Terminal, Bug,
 } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import AnalysisDemo from './AnalysisDemo'
@@ -14,6 +15,12 @@ const stats = [
   { icon: FolderGit2, value: projects.length, label: 'Security projects' },
   { icon: Wrench, value: tools.length, label: 'Tools and technologies' },
   { icon: Crosshair, value: areas.length, label: 'Focus areas' },
+]
+
+const focusChips = [
+  { icon: Fingerprint, label: 'Digital forensics' },
+  { icon: Terminal, label: 'Ethical hacking' },
+  { icon: Bug, label: 'Malware analysis' },
 ]
 
 const socials = [
@@ -31,7 +38,7 @@ export default function Hero() {
       />
       <div className="hero-grid absolute inset-0" />
       <div className="hero-glow absolute inset-0" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg/40 to-bg" />
+      
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-12 pt-14 lg:grid-cols-[1.1fr_1fr] lg:pt-20">
         <motion.div
@@ -40,12 +47,12 @@ export default function Hero() {
           transition={{ duration: 0.7 }}
         >
           <div className="flex items-center gap-3">
-            <div className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-line bg-surface-2">
+            <div className="relative h-20 w-18 overflow-hidden rounded-full border-2 border-line bg-surface-2">
               <div className="absolute inset-0 flex items-center justify-center font-bold text-muted">
                 RL
               </div>
               <img
-                src="/profile.jpg"
+                src="/1000331887.jpeg"
                 alt="Ravindu"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none'
@@ -68,10 +75,21 @@ export default function Hero() {
               Liyana Arachchi
             </span>
           </h1>
-          <p className="mt-3 text-lg text-muted">
-            Cybersecurity graduate · Digital forensics · Ethical hacking · Malware analysis
-          </p>
-          <p className="mt-4 max-w-xl leading-relaxed text-muted">
+          <p className="mt-4 text-xl font-medium text-ink">Cybersecurity graduate</p>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            {focusChips.map(({ icon: Icon, label }) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm text-muted"
+              >
+                <Icon size={15} className="text-accent" />
+                {label}
+              </span>
+            ))}
+          </div>
+
+          <p className="mt-5 max-w-md leading-relaxed text-muted">
             I investigate threats, test systems for weaknesses and build tools that defend.
           </p>
 

@@ -1,6 +1,39 @@
-   @import "tailwindcss";
-   @plugin "@tailwindcss/typography";
-   @theme {
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+   
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #eef0f7;
+  --line: #e2e5ef;
+  --ink: #0f1222;
+  --muted: #5b6178;
+  --accent: #5b5bf0;
+}
+
+.dark {
+  --bg: #0b0d17;
+  --surface: #12151f;
+  --surface-2: #181c29;
+  --line: #242a3a;
+  --ink: #f2f4fa;
+  --muted: #9aa3b8;
+  --accent: #8b7bff;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+}
+
+@theme {
   /* "cyan" is now blue, "emerald" is now purple */
   --color-cyan-200: #bfdbfe;
   --color-cyan-300: #93c5fd;

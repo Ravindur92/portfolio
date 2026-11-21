@@ -1,4 +1,6 @@
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import WorldMapBackground from './components/WorldMapBackground'
 import Hero from './components/Hero'
 import FocusAreas from './components/FocusAreas'
 import Projects from './components/Projects'
@@ -30,6 +32,7 @@ function Home() {
 export default function App() {
   return (
     <BrowserRouter>
+      <WorldMapBackground />
       <ScrollProgress />
       <Navbar />
       <Routes>
@@ -37,6 +40,7 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/projects/:id" element={<ProjectDetail />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
