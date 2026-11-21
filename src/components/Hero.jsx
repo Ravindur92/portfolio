@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="hero-glow absolute inset-0" />
       
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-12 pt-14 lg:grid-cols-[1.1fr_1fr] lg:pt-20">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pb-12 pt-28 lg:grid-cols-[1.1fr_1fr] lg:pt-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
