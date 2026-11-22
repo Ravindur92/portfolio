@@ -24,7 +24,7 @@ export default function About() {
           className="space-y-4 leading-relaxed text-gray-300"
         >
           <p>
-            I'm a cybersecurity undergraduate at Edith Cowan University Sri Lanka,
+            I'm a cybersecurity graduate at Edith Cowan University Sri Lanka,
             with academic experience in malware analysis, network security,
             digital forensics and security investigation.
           </p>

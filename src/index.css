@@ -15,9 +15,9 @@
 
 .dark {
   --bg: #0b0d17;
-  --surface: #12151f;
-  --surface-2: #181c29;
-  --line: #242a3a;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --line: rgba(139, 92, 246, 0.25);
   --ink: #f2f4fa;
   --muted: #9aa3b8;
   --accent: #8b7bff;
@@ -93,4 +93,10 @@ body {
     color-mix(in srgb, var(--accent) 16%, transparent),
     transparent 55%
   );
+}
+
+.dark .bg-surface,
+.dark .bg-surface-2 {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }

@@ -22,6 +22,18 @@ export default function Education() {
             <p className="font-mono text-xs text-emerald-400">{item.period}</p>
             <h3 className="mt-1 text-lg font-semibold text-white">{item.title}</h3>
             <p className="text-sm text-gray-400">{item.place}</p>
+            {item.stats && (
+              <div className="mt-4 flex flex-wrap gap-3">
+                {item.stats.map((stat) => (
+                  <div key={stat.label} className="glass rounded-xl px-5 py-3">
+                    <p className="font-mono text-xs uppercase tracking-widest text-emerald-400">
+                      {stat.label}
+                    </p>
+                    <p className="mt-1 text-2xl font-bold text-white">{stat.value}</p>
+                  </div>
+                ))}
+              </div>
+            )}
             {item.highlights.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-2">
                 {item.highlights.map((h) => (

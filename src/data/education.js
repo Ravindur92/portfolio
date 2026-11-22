@@ -4,6 +4,10 @@ export const education = [
     title: 'B.Sc. in Computer Science, Major in Cybersecurity',
     place: 'Edith Cowan University Sri Lanka',
     period: '2024 - 2026',
+    stats: [
+      { label: 'Course GPA', value: '3.354' },
+      { label: 'Course WAM', value: '75.208' },
+    ],
     highlights: [],
     years: [
       {
