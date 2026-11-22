@@ -36,7 +36,6 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: "url('/hero-bg.jpg')" }}
       />
-      <div className="hero-grid absolute inset-0" />
       <div className="hero-glow absolute inset-0" />
       
 
